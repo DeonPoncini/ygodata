@@ -608,4 +608,90 @@ std::string fromBattlePosition(BattlePosition battlePosition)
     }
 }
 
+Format toFormat(const std::string& format)
+{
+    if (format == "Traditional")
+    {
+        return Format::TRADITIONAL;
+    }
+    else if (format == "Advanced")
+    {
+        return Format::ADVANCED;
+    }
+    throw std::domain_error("Invalid format");
+}
+
+std::string fromFormat(Format format)
+{
+    switch (format)
+    {
+        case Format::TRADITIONAL: return "Traditional";
+        case Format::ADVANCED: return "Advanced";
+    }
+}
+
+Limitation toLimitation(const std::string& limitation)
+{
+    if (limitation == "Illegal")
+    {
+        return Limitation::ILLEGAL;
+    }
+    else if (limitation == "Forbidden")
+    {
+        return Limitation::FORBIDDEN;
+    }
+    else if (limitation == "Limited")
+    {
+        return Limitation::LIMITED;
+    }
+    else if (limitation == "Semi-limited")
+    {
+        return Limitation::SEMILIMITED;
+    }
+    else if (limitation == "Unlimited")
+    {
+        return Limitation::UNLIMITED;
+    }
+    throw std::domain_error("Invalid limitation");
+}
+
+std::string fromLimitation(Limitation limitation)
+{
+    switch (limitation)
+    {
+        case Limitation::ILLEGAL: return "Illegal";
+        case Limitation::FORBIDDEN: return "Forbidden";
+        case Limitation::LIMITED: return "Limited";
+        case Limitation::SEMILIMITED: return "Semi-limited";
+        case Limitation::UNLIMITED: return "Unlimited";
+    }
+}
+
+DeckType toDeckType(const std::string& deckType)
+{
+    if (deckType == "Main")
+    {
+        return DeckType::MAIN;
+    }
+    else if (deckType == "Side")
+    {
+        return DeckType::SIDE;
+    }
+    else if (deckType == "Extra")
+    {
+        return DeckType::EXTRA;
+    }
+    throw std::domain_error("Invalid deck type");
+}
+
+std::string fromDeckType(DeckType deckType)
+{
+    switch (deckType)
+    {
+        case DeckType::MAIN: return "Main";
+        case DeckType::SIDE: return "Side";
+        case DeckType::EXTRA: return "Extra";
+    }
+}
+
 }

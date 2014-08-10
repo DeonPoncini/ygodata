@@ -2,6 +2,7 @@
 #define YGO_SERIALIZE_H
 
 #include "CardData.h"
+#include "FormatData.h"
 
 namespace ygo
 {
@@ -32,6 +33,15 @@ Position toPosition(const std::string& position);
 std::string fromPosition(Position position);
 BattlePosition toBattlePosition(const std::string& battlePosition);
 std::string fromBattlePosition(BattlePosition battlePosition);
+
+Format toFormat(const std::string& format);
+std::string fromFormat(Format format);
+
+Limitation toLimitation(const std::string& limitation);
+std::string fromLimitation(Limitation limitation);
+
+DeckType toDeckType(const std::string& deckType);
+std::string fromDeckType(DeckType deckType);
 
 }
 
