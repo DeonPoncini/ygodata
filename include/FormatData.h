@@ -1,17 +1,10 @@
 #ifndef YGO_FORMATDATA_H
 #define YGO_FORMATDATA_H
 
+#include <map>
+
 namespace ygo
 {
-
-static const int PRIMARY_DECK_MIN = 40;
-static const int PRIMARY_DECK_MAX = 60;
-
-static const int EXTRA_DECK_MIN = 0;
-static const int EXTRA_DECK_MAX = 15;
-
-static const int SIDE_DECK_MIN = 0;
-static const int SIDE_DECK_MAX = 15;
 
 enum class Format
 {
@@ -33,6 +26,13 @@ enum class DeckType
     MAIN,
     SIDE,
     EXTRA
+};
+
+static std::map<DeckType,std::pair<int,int>> DeckLimits =
+{
+    {DeckType::MAIN,{40,60}},
+    {DeckType::SIDE,{0,15}},
+    {DeckType::EXTRA,{0,15}},
 };
 
 }
