@@ -8,22 +8,15 @@
 namespace ygo
 {
 
-class Player;
-
-struct CardData
+struct StaticCardData
 {
     std::string name;
     CardType cardType;
-    Location location;
-    Position position;
-    Player* owner;
-    Player* controller;
     // monster only
     Attribute attribute;
     MonsterType monsterType;
     Type type;
     MonsterAbility monsterAbility;
-    BattlePosition battlePosition;
     int level;
     int attack;
     int defense;
@@ -32,7 +25,6 @@ struct CardData
     // spell and trap only
     SpellType spellType;
     TrapType trapType;
-    int speed;
 };
 
 }
