@@ -28,12 +28,9 @@ enum class DeckType
     EXTRA
 };
 
-static std::map<DeckType,std::pair<int,int>> DeckLimits =
-{
-    {DeckType::MAIN,{40,60}},
-    {DeckType::SIDE,{0,15}},
-    {DeckType::EXTRA,{0,15}},
-};
+int DeckMax(DeckType deckType);
+int DeckMin(DeckType deckType);
+int CardLimitation(Limitation limitation, Format format);
 
 }
 
