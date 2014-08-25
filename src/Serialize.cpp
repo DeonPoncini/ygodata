@@ -19,7 +19,7 @@ CardType toCardType(const std::string& cardType)
     {
         return CardType::TRAP;
     }
-    throw std::domain_error("Invalid card type");
+    throw std::domain_error("Invalid card type " + cardType);
 }
 
 std::string fromCardType(CardType cardType)
@@ -30,7 +30,6 @@ std::string fromCardType(CardType cardType)
         case CardType::SPELL: return "Spell";
         case CardType::TRAP: return "Trap";
     }
-    throw std::domain_error("Invalid card type");
 }
 
 Attribute toAttribute(const std::string& attribute)
@@ -39,35 +38,35 @@ Attribute toAttribute(const std::string& attribute)
     {
         return Attribute::NONE;
     }
-    else if (attribute == "Dark")
+    else if (attribute == "DARK")
     {
         return Attribute::DARK;
     }
-    else if (attribute == "Divine")
+    else if (attribute == "DIVINE")
     {
         return Attribute::DIVINE;
     }
-    else if (attribute == "Earth")
+    else if (attribute == "EARTH")
     {
         return Attribute::EARTH;
     }
-    else if (attribute == "Fire")
+    else if (attribute == "FIRE")
     {
         return Attribute::FIRE;
     }
-    else if (attribute == "Light")
+    else if (attribute == "LIGHT")
     {
         return Attribute::LIGHT;
     }
-    else if (attribute == "Water")
+    else if (attribute == "WATER")
     {
         return Attribute::WATER;
     }
-    else if (attribute == "Wind")
+    else if (attribute == "WIND")
     {
         return Attribute::WIND;
     }
-    throw std::domain_error("Invalid attribute");
+    throw std::domain_error("Invalid attribute " + attribute);
 }
 
 std::string fromAttribute(Attribute attribute)
@@ -82,9 +81,7 @@ std::string fromAttribute(Attribute attribute)
         case Attribute::LIGHT: return "Light";
         case Attribute::WATER: return "Water";
         case Attribute::WIND: return "Wind";
-
     }
-    throw std::domain_error("Invalid attribute");
 }
 
 Type toType(const std::string& type)
@@ -189,7 +186,7 @@ Type toType(const std::string& type)
     {
         return Type::ZOMBIE;
     }
-    throw std::domain_error("Invalid type");
+    throw std::domain_error("Invalid type " + type);
 }
 
 std::string fromType(Type type)
@@ -222,7 +219,6 @@ std::string fromType(Type type)
         case Type::WYRM: return "Wyrm";
         case Type::ZOMBIE: return "Zombie";
     }
-    throw std::domain_error("Invalid type");
 }
 
 MonsterType toMonsterType(const std::string& monsterType)
@@ -263,7 +259,7 @@ MonsterType toMonsterType(const std::string& monsterType)
     {
         return MonsterType::TOKEN;
     }
-    throw std::domain_error("Invalid monster type");
+    throw std::domain_error("Invalid monster type " + monsterType);
 }
 
 std::string fromMonsterType(MonsterType monsterType)
@@ -280,7 +276,6 @@ std::string fromMonsterType(MonsterType monsterType)
         case MonsterType::PENDULUM: return "Pendulum";
         case MonsterType::TOKEN: return "Token";
     }
-    throw std::domain_error("Invalid monster type");
 }
 
 MonsterAbility toMonsterAbility(const std::string& monsterAbility)
@@ -317,7 +312,7 @@ MonsterAbility toMonsterAbility(const std::string& monsterAbility)
     {
         return MonsterAbility::TUNER;
     }
-    throw std::domain_error("Invalid monster 2nd type");
+    throw std::domain_error("Invalid monster ability " + monsterAbility);
 }
 
 std::string fromMonsterAbility(MonsterAbility monsterAbility)
@@ -333,7 +328,6 @@ std::string fromMonsterAbility(MonsterAbility monsterAbility)
         case MonsterAbility::GEMINI: return "Gemini";
         case MonsterAbility::TUNER: return "Tuner";
     }
-    throw std::domain_error("Invalid monster 2nd type");
 }
 
 SpellType toSpellType(const std::string& spellType)
@@ -366,7 +360,7 @@ SpellType toSpellType(const std::string& spellType)
     {
         return SpellType::RITUAL;
     }
-    throw std::domain_error("Invalid spell type");
+    throw std::domain_error("Invalid spell type " + spellType);
 }
 
 std::string fromSpellType(SpellType spellType)
@@ -381,7 +375,6 @@ std::string fromSpellType(SpellType spellType)
         case SpellType::QUICK: return "Quick";
         case SpellType::RITUAL: return "Ritual";
     }
-    throw std::domain_error("Invalid spell type");
 }
 
 TrapType toTrapType(const std::string& trapType)
@@ -402,7 +395,7 @@ TrapType toTrapType(const std::string& trapType)
     {
         return TrapType::COUNTER;
     }
-    throw std::domain_error("Invalid trap type");
+    throw std::domain_error("Invalid trap type " + trapType);
 }
 
 std::string fromTrapType(TrapType trapType)
@@ -414,7 +407,6 @@ std::string fromTrapType(TrapType trapType)
         case TrapType::CONTINUOUS: return "Continuous";
         case TrapType::COUNTER: return "Counter";
     }
-    throw std::domain_error("Invalid trap type");
 }
 
 int toSpeed(SpellType type)
@@ -432,7 +424,6 @@ int toSpeed(SpellType type)
         case SpellType::QUICK:
             return 2;
     }
-    throw std::domain_error("Invalid spell type");
 }
 
 int toSpeed(TrapType type)
@@ -447,7 +438,6 @@ int toSpeed(TrapType type)
         case TrapType::COUNTER:
             return 3;
     }
-    throw std::domain_error("Invalid trap type");
 }
 
 Location toLocation(const std::string& location)
@@ -528,7 +518,7 @@ Location toLocation(const std::string& location)
     {
         return Location::S5;
     }
-    throw std::domain_error("Invalid location");
+    throw std::domain_error("Invalid location " + location);
 }
 
 std::string fromLocation(Location location)
@@ -555,7 +545,6 @@ std::string fromLocation(Location location)
         case Location::S4: return "S4";
         case Location::S5: return "S5";
     }
-    throw std::domain_error("Invalid location");
 }
 
 Position toPosition(const std::string& position)
@@ -568,7 +557,7 @@ Position toPosition(const std::string& position)
     {
         return Position::FACEUP;
     }
-    throw std::domain_error("Invalid position");
+    throw std::domain_error("Invalid position " + position);
 }
 
 std::string fromPosition(Position position)
@@ -578,7 +567,6 @@ std::string fromPosition(Position position)
         case Position::FACEDOWN: return "FaceDown";
         case Position::FACEUP: return "FaceUp";
     }
-    throw std::domain_error("Invalid position");
 }
 
 BattlePosition toBattlePosition(const std::string& battlePosition)
@@ -595,7 +583,7 @@ BattlePosition toBattlePosition(const std::string& battlePosition)
     {
         return BattlePosition::DEFENSE;
     }
-    throw std::domain_error("Invalid battle position");
+    throw std::domain_error("Invalid battle position " + battlePosition);
 }
 
 std::string fromBattlePosition(BattlePosition battlePosition)
@@ -618,7 +606,7 @@ Format toFormat(const std::string& format)
     {
         return Format::ADVANCED;
     }
-    throw std::domain_error("Invalid format");
+    throw std::domain_error("Invalid format " + format);
 }
 
 std::string fromFormat(Format format)
@@ -652,7 +640,7 @@ Limitation toLimitation(const std::string& limitation)
     {
         return Limitation::UNLIMITED;
     }
-    throw std::domain_error("Invalid limitation");
+    throw std::domain_error("Invalid limitation " + limitation);
 }
 
 std::string fromLimitation(Limitation limitation)
@@ -681,7 +669,7 @@ DeckType toDeckType(const std::string& deckType)
     {
         return DeckType::EXTRA;
     }
-    throw std::domain_error("Invalid deck type");
+    throw std::domain_error("Invalid deck type " + deckType);
 }
 
 std::string fromDeckType(DeckType deckType)
