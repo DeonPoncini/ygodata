@@ -74,13 +74,13 @@ std::string fromAttribute(Attribute attribute)
     switch (attribute)
     {
         case Attribute::NONE: return "None";
-        case Attribute::DARK: return "Dark";
-        case Attribute::DIVINE: return "Divine";
-        case Attribute::EARTH: return "Earth";
-        case Attribute::FIRE: return "Fire";
-        case Attribute::LIGHT: return "Light";
-        case Attribute::WATER: return "Water";
-        case Attribute::WIND: return "Wind";
+        case Attribute::DARK: return "DARK";
+        case Attribute::DIVINE: return "DIVINE";
+        case Attribute::EARTH: return "EARTH";
+        case Attribute::FIRE: return "FIRE";
+        case Attribute::LIGHT: return "LIGHT";
+        case Attribute::WATER: return "WATER";
+        case Attribute::WIND: return "WIND";
     }
 }
 
