@@ -1,7 +1,10 @@
 #ifndef YGO_FORMATDATA_H
 #define YGO_FORMATDATA_H
 
+#include "CardData.h"
+
 #include <map>
+#include <vector>
 
 namespace ygo
 {
@@ -31,6 +34,8 @@ enum class DeckType
 int DeckMax(DeckType deckType);
 int DeckMin(DeckType deckType);
 int CardLimitation(Limitation limitation, Format format);
+
+typedef std::map<DeckType,std::vector<StaticCardData>> CardMap;
 
 }
 
