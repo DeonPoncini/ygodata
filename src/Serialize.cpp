@@ -98,7 +98,7 @@ Type toType(const std::string& type)
     {
         return Type::BEAST;
     }
-    else if (type == "BeastWarrior")
+    else if (type == "Beast-Warrior")
     {
         return Type::BEASTWARRIOR;
     }
@@ -158,7 +158,7 @@ Type toType(const std::string& type)
     {
         return Type::ROCK;
     }
-    else if (type == "SeaSerpent")
+    else if (type == "Sea Serpent")
     {
         return Type::SEASERPENT;
     }
@@ -196,7 +196,7 @@ std::string fromType(Type type)
         case Type::NONE: return "None";
         case Type::AQUA: return "Aqua";
         case Type::BEAST: return "Beast";
-        case Type::BEASTWARRIOR: return "BeastWarrior";
+        case Type::BEASTWARRIOR: return "Beast-Warrior";
         case Type::CREATORGOD: return "CreatorGod";
         case Type::DINOSAUR: return "Dinosaur";
         case Type::DIVINEBEAST: return "DivineBeast";
@@ -211,7 +211,7 @@ std::string fromType(Type type)
         case Type::PYRO: return "Pyro";
         case Type::REPTILE: return "Reptile";
         case Type::ROCK: return "Rock";
-        case Type::SEASERPENT: return "SeaSerpent";
+        case Type::SEASERPENT: return "Sea Serpent";
         case Type::SPELLCASTER: return "Spellcaster";
         case Type::THUNDER: return "Thunder";
         case Type::WARRIOR: return "Warrior";
@@ -352,7 +352,7 @@ SpellType toSpellType(const std::string& spellType)
     {
         return SpellType::EQUIP;
     }
-    else if (spellType == "Quick")
+    else if (spellType == "Quick-Play")
     {
         return SpellType::QUICK;
     }
@@ -372,7 +372,7 @@ std::string fromSpellType(SpellType spellType)
         case SpellType::CONTINUOUS: return "Continuous";
         case SpellType::FIELD: return "Field";
         case SpellType::EQUIP: return "Equip";
-        case SpellType::QUICK: return "Quick";
+        case SpellType::QUICK: return "Quick-Play";
         case SpellType::RITUAL: return "Ritual";
     }
 }
