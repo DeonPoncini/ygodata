@@ -21,13 +21,7 @@ enum class MonsterType
     SYNCHRO,
     XYZ,
     PENDULUM,
-    TOKEN
-};
-
-enum class MonsterAbility
-{
-    NONE,
-    EFFECT,
+    TOKEN,
     FLIP,
     TOON,
     SPIRIT,

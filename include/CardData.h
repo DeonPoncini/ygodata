@@ -16,7 +16,7 @@ struct StaticCardData
     Attribute attribute;
     MonsterType monsterType;
     Type type;
-    MonsterAbility monsterAbility;
+    MonsterType monsterAbility;
     int level;
     int attack;
     int defense;

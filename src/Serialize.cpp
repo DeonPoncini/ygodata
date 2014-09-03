@@ -259,6 +259,34 @@ MonsterType toMonsterType(const std::string& monsterType)
     {
         return MonsterType::TOKEN;
     }
+    else if (monsterType == "Effect")
+    {
+        return MonsterType::EFFECT;
+    }
+    else if (monsterType == "Flip")
+    {
+        return MonsterType::FLIP;
+    }
+    else if (monsterType == "Toon")
+    {
+        return MonsterType::TOON;
+    }
+    else if (monsterType == "Spirit")
+    {
+        return MonsterType::SPIRIT;
+    }
+    else if (monsterType == "Union")
+    {
+        return MonsterType::UNION;
+    }
+    else if (monsterType == "Gemini")
+    {
+        return MonsterType::GEMINI;
+    }
+    else if (monsterType == "Tuner")
+    {
+        return MonsterType::TUNER;
+    }
     throw std::domain_error("Invalid monster type " + monsterType);
 }
 
@@ -275,58 +303,12 @@ std::string fromMonsterType(MonsterType monsterType)
         case MonsterType::XYZ: return "Xyz";
         case MonsterType::PENDULUM: return "Pendulum";
         case MonsterType::TOKEN: return "Token";
-    }
-}
-
-MonsterAbility toMonsterAbility(const std::string& monsterAbility)
-{
-    if (monsterAbility == "None")
-    {
-        return MonsterAbility::NONE;
-    }
-    else if (monsterAbility == "Effect")
-    {
-        return MonsterAbility::EFFECT;
-    }
-    else if (monsterAbility == "Flip")
-    {
-        return MonsterAbility::FLIP;
-    }
-    else if (monsterAbility == "Toon")
-    {
-        return MonsterAbility::TOON;
-    }
-    else if (monsterAbility == "Spirit")
-    {
-        return MonsterAbility::SPIRIT;
-    }
-    else if (monsterAbility == "Union")
-    {
-        return MonsterAbility::UNION;
-    }
-    else if (monsterAbility == "Gemini")
-    {
-        return MonsterAbility::GEMINI;
-    }
-    else if (monsterAbility == "Tuner")
-    {
-        return MonsterAbility::TUNER;
-    }
-    throw std::domain_error("Invalid monster ability " + monsterAbility);
-}
-
-std::string fromMonsterAbility(MonsterAbility monsterAbility)
-{
-    switch (monsterAbility)
-    {
-        case MonsterAbility::NONE: return "None";
-        case MonsterAbility::EFFECT: return "Effect";
-        case MonsterAbility::FLIP: return "Flip";
-        case MonsterAbility::TOON: return "Toon";
-        case MonsterAbility::SPIRIT: return "Spirit";
-        case MonsterAbility::UNION: return "Union";
-        case MonsterAbility::GEMINI: return "Gemini";
-        case MonsterAbility::TUNER: return "Tuner";
+        case MonsterType::FLIP: return "Flip";
+        case MonsterType::TOON: return "Toon";
+        case MonsterType::SPIRIT: return "Spirit";
+        case MonsterType::UNION: return "Union";
+        case MonsterType::GEMINI: return "Gemini";
+        case MonsterType::TUNER: return "Tuner";
     }
 }
 

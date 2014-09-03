@@ -11,7 +11,6 @@ CardType toCardType(const std::string& cardType);
 Attribute toAttribute(const std::string& attribute);
 Type toType(const std::string& type);
 MonsterType toMonsterType(const std::string& monsterType);
-MonsterAbility toMonsterAbility(const std::string& monsterAbility);
 SpellType toSpellType(const std::string& spellType);
 TrapType toTrapType(const std::string& trapType);
 
@@ -19,7 +18,6 @@ std::string fromCardType(CardType cardType);
 std::string fromAttribute(Attribute attribute);
 std::string fromType(Type type);
 std::string fromMonsterType(MonsterType monsterType);
-std::string fromMonsterAbility(MonsterAbility monster2ndType);
 std::string fromSpellType(SpellType spellType);
 std::string fromTrapType(TrapType trapType);
 
