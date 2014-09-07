@@ -8,6 +8,8 @@
 
 namespace ygo
 {
+namespace data
+{
 
 enum class Format
 {
@@ -37,6 +39,7 @@ int CardLimitation(Limitation limitation, Format format);
 
 typedef std::map<DeckType,std::vector<StaticCardData>> CardMap;
 
+}
 }
 
 #endif

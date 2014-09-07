@@ -6,6 +6,8 @@
 
 namespace ygo
 {
+namespace data
+{
 
 CardType toCardType(const std::string& cardType);
 Attribute toAttribute(const std::string& attribute);
@@ -41,6 +43,7 @@ std::string fromLimitation(Limitation limitation);
 DeckType toDeckType(const std::string& deckType);
 std::string fromDeckType(DeckType deckType);
 
+}
 }
 
 #endif

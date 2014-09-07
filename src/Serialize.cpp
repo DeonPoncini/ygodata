@@ -4,6 +4,8 @@
 
 namespace ygo
 {
+namespace data
+{
 
 CardType toCardType(const std::string& cardType)
 {
@@ -664,4 +666,5 @@ std::string fromDeckType(DeckType deckType)
     }
 }
 
+}
 }

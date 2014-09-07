@@ -3,6 +3,8 @@
 
 namespace ygo
 {
+namespace data
+{
 
 enum class CardType
 {
@@ -126,6 +128,7 @@ enum class BattlePosition
     DEFENSE
 };
 
+}
 }
 
 #endif

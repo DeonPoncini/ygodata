@@ -7,6 +7,8 @@
 
 namespace ygo
 {
+namespace data
+{
 
 struct StaticCardData
 {
@@ -27,6 +29,7 @@ struct StaticCardData
     TrapType trapType;
 };
 
+}
 }
 
 #endif

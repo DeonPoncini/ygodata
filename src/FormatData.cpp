@@ -2,6 +2,8 @@
 
 namespace ygo
 {
+namespace data
+{
 
 int DeckMax(DeckType deckType)
 {
@@ -40,5 +42,6 @@ int CardLimitation(Limitation limitation, Format format)
         case Limitation::SEMILIMITED: return 2;
         case Limitation::UNLIMITED: return 3;
     }
+}
 }
 }
