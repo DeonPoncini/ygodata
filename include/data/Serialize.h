@@ -1,5 +1,5 @@
-#ifndef YGO_SERIALIZE_H
-#define YGO_SERIALIZE_H
+#ifndef YGO_DATA_SERIALIZE_H
+#define YGO_DATA_SERIALIZE_H
 
 #include "CardData.h"
 #include "FormatData.h"

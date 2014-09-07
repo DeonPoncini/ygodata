@@ -1,5 +1,5 @@
-#ifndef YGO_FORMATDATA_H
-#define YGO_FORMATDATA_H
+#ifndef YGO_DATA_FORMATDATA_H
+#define YGO_DATA_FORMATDATA_H
 
 #include "CardData.h"
 

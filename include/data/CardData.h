@@ -1,5 +1,5 @@
-#ifndef YGO_CARDDATA_H
-#define YGO_CARDDATA_H
+#ifndef YGO_DATA_CARDDATA_H
+#define YGO_DATA_CARDDATA_H
 
 #include <string>
 

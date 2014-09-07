@@ -1,5 +1,5 @@
-#ifndef YGO_CARDTYPE_H
-#define YGO_CARDTYPE_H
+#ifndef YGO_DATA_CARDTYPE_H
+#define YGO_DATA_CARDTYPE_H
 
 namespace ygo
 {
