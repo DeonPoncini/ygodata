@@ -39,6 +39,7 @@ int CardLimitation(Limitation limitation, Format format);
 
 typedef std::map<DeckType,std::vector<StaticCardData>> CardMap;
 static const unsigned ZONE_COUNT = 5;
+static const unsigned OPENING_HAND = 5;
 
 }
 }
