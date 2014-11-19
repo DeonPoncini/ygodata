@@ -176,7 +176,7 @@ Type toType(const std::string& type)
     {
         return Type::WARRIOR;
     }
-    else if (type == "WingedBeast")
+    else if (type == "Winged Beast")
     {
         return Type::WINGEDBEAST;
     }
@@ -217,7 +217,7 @@ std::string fromType(Type type)
         case Type::SPELLCASTER: return "Spellcaster";
         case Type::THUNDER: return "Thunder";
         case Type::WARRIOR: return "Warrior";
-        case Type::WINGEDBEAST: return "WingedBeast";
+        case Type::WINGEDBEAST: return "Winged Beast";
         case Type::WYRM: return "Wyrm";
         case Type::ZOMBIE: return "Zombie";
     }

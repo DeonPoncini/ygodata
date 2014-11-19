@@ -12,7 +12,7 @@ namespace data
 
 struct StaticCardData
 {
-    const char* name;
+    std::string name;
     CardType cardType;
     // monster only
     Attribute attribute;
