@@ -7,8 +7,7 @@ namespace data
 
 int DeckMax(DeckType deckType)
 {
-    switch (deckType)
-    {
+    switch (deckType) {
         case DeckType::MAIN: return 60;
         case DeckType::SIDE: return 15;
         case DeckType::EXTRA: return 15;
@@ -17,8 +16,7 @@ int DeckMax(DeckType deckType)
 
 int DeckMin(DeckType deckType)
 {
-    switch (deckType)
-    {
+    switch (deckType) {
         case DeckType::MAIN: return 40;
         case DeckType::SIDE: return 0;
         case DeckType::EXTRA: return 0;
@@ -27,13 +25,10 @@ int DeckMin(DeckType deckType)
 
 int CardLimitation(Limitation limitation, Format format)
 {
-    switch (limitation)
-    {
+    switch (limitation) {
         case Limitation::ILLEGAL: return 0;
-        case Limitation::FORBIDDEN:
-        {
-            switch (format)
-            {
+        case Limitation::FORBIDDEN: {
+            switch (format) {
                 case Format::TRADITIONAL: return 1;
                 case Format::ADVANCED: return 0;
             }

@@ -9,16 +9,11 @@ namespace data
 
 CardType toCardType(const std::string& cardType)
 {
-    if (cardType == "Monster")
-    {
+    if (cardType == "Monster") {
         return CardType::MONSTER;
-    }
-    else if (cardType == "Spell")
-    {
+    } else if (cardType == "Spell") {
         return CardType::SPELL;
-    }
-    else if (cardType == "Trap")
-    {
+    } else if (cardType == "Trap") {
         return CardType::TRAP;
     }
     throw std::domain_error("Invalid card type " + cardType);
@@ -26,8 +21,7 @@ CardType toCardType(const std::string& cardType)
 
 std::string fromCardType(CardType cardType)
 {
-    switch (cardType)
-    {
+    switch (cardType) {
         case CardType::MONSTER: return "Monster";
         case CardType::SPELL: return "Spell";
         case CardType::TRAP: return "Trap";
@@ -36,36 +30,21 @@ std::string fromCardType(CardType cardType)
 
 Attribute toAttribute(const std::string& attribute)
 {
-    if (attribute == "None")
-    {
+    if (attribute == "None") {
         return Attribute::NONE;
-    }
-    else if (attribute == "DARK")
-    {
+    } else if (attribute == "DARK") {
         return Attribute::DARK;
-    }
-    else if (attribute == "DIVINE")
-    {
+    } else if (attribute == "DIVINE") {
         return Attribute::DIVINE;
-    }
-    else if (attribute == "EARTH")
-    {
+    } else if (attribute == "EARTH") {
         return Attribute::EARTH;
-    }
-    else if (attribute == "FIRE")
-    {
+    } else if (attribute == "FIRE") {
         return Attribute::FIRE;
-    }
-    else if (attribute == "LIGHT")
-    {
+    } else if (attribute == "LIGHT") {
         return Attribute::LIGHT;
-    }
-    else if (attribute == "WATER")
-    {
+    } else if (attribute == "WATER") {
         return Attribute::WATER;
-    }
-    else if (attribute == "WIND")
-    {
+    } else if (attribute == "WIND") {
         return Attribute::WIND;
     }
     throw std::domain_error("Invalid attribute " + attribute);
@@ -73,8 +52,7 @@ Attribute toAttribute(const std::string& attribute)
 
 std::string fromAttribute(Attribute attribute)
 {
-    switch (attribute)
-    {
+    switch (attribute) {
         case Attribute::NONE: return "None";
         case Attribute::DARK: return "DARK";
         case Attribute::DIVINE: return "DIVINE";
@@ -88,104 +66,55 @@ std::string fromAttribute(Attribute attribute)
 
 Type toType(const std::string& type)
 {
-    if (type == "None")
-    {
+    if (type == "None") {
         return Type::NONE;
-    }
-    else if (type == "Aqua")
-    {
+    } else if (type == "Aqua") {
         return Type::AQUA;
-    }
-    else if (type == "Beast")
-    {
+    } else if (type == "Beast") {
         return Type::BEAST;
-    }
-    else if (type == "Beast-Warrior")
-    {
+    } else if (type == "Beast-Warrior") {
         return Type::BEASTWARRIOR;
-    }
-    else if (type == "CreatorGod")
-    {
+    } else if (type == "CreatorGod") {
         return Type::CREATORGOD;
-    }
-    else if (type == "Dinosaur")
-    {
+    } else if (type == "Dinosaur") {
         return Type::DINOSAUR;
-    }
-    else if (type == "DivineBeast")
-    {
+    } else if (type == "DivineBeast") {
         return Type::DIVINEBEAST;
-    }
-    else if (type == "Dragon")
-    {
+    } else if (type == "Dragon") {
         return Type::DRAGON;
-    }
-    else if (type == "Fairy")
-    {
+    } else if (type == "Fairy") {
         return Type::FAIRY;
-    }
-    else if (type == "Fiend")
-    {
+    } else if (type == "Fiend") {
         return Type::FIEND;
-    }
-    else if (type == "Fish")
-    {
+    } else if (type == "Fish") {
         return Type::FISH;
-    }
-    else if (type == "Insect")
-    {
+    } else if (type == "Insect") {
         return Type::INSECT;
-    }
-    else if (type == "Machine")
-    {
+    } else if (type == "Machine") {
         return Type::MACHINE;
-    }
-    else if (type == "Plant")
-    {
+    } else if (type == "Plant") {
         return Type::PLANT;
-    }
-    else if (type == "Psychic")
-    {
+    } else if (type == "Psychic") {
         return Type::PSYCHIC;
-    }
-    else if (type == "Pyro")
-    {
+    } else if (type == "Pyro") {
         return Type::PYRO;
-    }
-    else if (type == "Reptile")
-    {
+    } else if (type == "Reptile") {
         return Type::REPTILE;
-    }
-    else if (type == "Rock")
-    {
+    } else if (type == "Rock") {
         return Type::ROCK;
-    }
-    else if (type == "Sea Serpent")
-    {
+    } else if (type == "Sea Serpent") {
         return Type::SEASERPENT;
-    }
-    else if (type == "Spellcaster")
-    {
+    } else if (type == "Spellcaster") {
         return Type::SPELLCASTER;
-    }
-    else if (type == "Thunder")
-    {
+    } else if (type == "Thunder") {
         return Type::THUNDER;
-    }
-    else if (type == "Warrior")
-    {
+    } else if (type == "Warrior") {
         return Type::WARRIOR;
-    }
-    else if (type == "Winged Beast")
-    {
+    } else if (type == "Winged Beast") {
         return Type::WINGEDBEAST;
-    }
-    else if (type == "Wyrm")
-    {
+    } else if (type == "Wyrm") {
         return Type::WYRM;
-    }
-    else if (type == "Zombie")
-    {
+    } else if (type == "Zombie") {
         return Type::ZOMBIE;
     }
     throw std::domain_error("Invalid type " + type);
@@ -193,8 +122,7 @@ Type toType(const std::string& type)
 
 std::string fromType(Type type)
 {
-    switch (type)
-    {
+    switch (type) {
         case Type::NONE: return "None";
         case Type::AQUA: return "Aqua";
         case Type::BEAST: return "Beast";
@@ -225,68 +153,37 @@ std::string fromType(Type type)
 
 MonsterType toMonsterType(const std::string& monsterType)
 {
-    if (monsterType == "None")
-    {
+    if (monsterType == "None") {
         return MonsterType::NONE;
-    }
-    else if (monsterType == "Normal")
-    {
+    } else if (monsterType == "Normal") {
         return MonsterType::NORMAL;
-    }
-    else if (monsterType == "Effect")
-    {
+    } else if (monsterType == "Effect") {
         return MonsterType::EFFECT;
-    }
-    else if (monsterType == "Fusion")
-    {
+    } else if (monsterType == "Fusion") {
         return MonsterType::FUSION;
-    }
-    else if (monsterType == "Ritual")
-    {
+    } else if (monsterType == "Ritual") {
         return MonsterType::RITUAL;
-    }
-    else if (monsterType == "Synchro")
-    {
+    } else if (monsterType == "Synchro") {
         return MonsterType::SYNCHRO;
-    }
-    else if (monsterType == "Xyz")
-    {
+    } else if (monsterType == "Xyz") {
         return MonsterType::XYZ;
-    }
-    else if (monsterType == "Pendulum")
-    {
+    } else if (monsterType == "Pendulum") {
         return MonsterType::PENDULUM;
-    }
-    else if (monsterType == "Token")
-    {
+    } else if (monsterType == "Token") {
         return MonsterType::TOKEN;
-    }
-    else if (monsterType == "Effect")
-    {
+    } else if (monsterType == "Effect") {
         return MonsterType::EFFECT;
-    }
-    else if (monsterType == "Flip")
-    {
+    } else if (monsterType == "Flip") {
         return MonsterType::FLIP;
-    }
-    else if (monsterType == "Toon")
-    {
+    } else if (monsterType == "Toon") {
         return MonsterType::TOON;
-    }
-    else if (monsterType == "Spirit")
-    {
+    } else if (monsterType == "Spirit") {
         return MonsterType::SPIRIT;
-    }
-    else if (monsterType == "Union")
-    {
+    } else if (monsterType == "Union") {
         return MonsterType::UNION;
-    }
-    else if (monsterType == "Gemini")
-    {
+    } else if (monsterType == "Gemini") {
         return MonsterType::GEMINI;
-    }
-    else if (monsterType == "Tuner")
-    {
+    } else if (monsterType == "Tuner") {
         return MonsterType::TUNER;
     }
     throw std::domain_error("Invalid monster type " + monsterType);
@@ -294,8 +191,7 @@ MonsterType toMonsterType(const std::string& monsterType)
 
 std::string fromMonsterType(MonsterType monsterType)
 {
-    switch (monsterType)
-    {
+    switch (monsterType) {
         case MonsterType::NONE: return "None";
         case MonsterType::NORMAL: return "Normal";
         case MonsterType::EFFECT: return "Effect";
@@ -316,32 +212,19 @@ std::string fromMonsterType(MonsterType monsterType)
 
 SpellType toSpellType(const std::string& spellType)
 {
-    if (spellType == "None")
-    {
+    if (spellType == "None") {
         return SpellType::NONE;
-    }
-    else if (spellType == "Normal")
-    {
+    } else if (spellType == "Normal") {
         return SpellType::NORMAL;
-    }
-    else if (spellType == "Continuous")
-    {
+    } else if (spellType == "Continuous") {
         return SpellType::CONTINUOUS;
-    }
-    else if (spellType == "Field")
-    {
+    } else if (spellType == "Field") {
         return SpellType::FIELD;
-    }
-    else if (spellType == "Equip")
-    {
+    } else if (spellType == "Equip") {
         return SpellType::EQUIP;
-    }
-    else if (spellType == "Quick-Play")
-    {
+    } else if (spellType == "Quick-Play") {
         return SpellType::QUICK;
-    }
-    else if (spellType == "Ritual")
-    {
+    } else if (spellType == "Ritual") {
         return SpellType::RITUAL;
     }
     throw std::domain_error("Invalid spell type " + spellType);
@@ -349,8 +232,7 @@ SpellType toSpellType(const std::string& spellType)
 
 std::string fromSpellType(SpellType spellType)
 {
-    switch (spellType)
-    {
+    switch (spellType) {
         case SpellType::NONE: return "None";
         case SpellType::NORMAL: return "Normal";
         case SpellType::CONTINUOUS: return "Continuous";
@@ -363,20 +245,13 @@ std::string fromSpellType(SpellType spellType)
 
 TrapType toTrapType(const std::string& trapType)
 {
-    if (trapType == "None")
-    {
+    if (trapType == "None") {
         return TrapType::NONE;
-    }
-    if (trapType == "Normal")
-    {
+    } if (trapType == "Normal") {
         return TrapType::NORMAL;
-    }
-    else if (trapType == "Continuous")
-    {
+    } else if (trapType == "Continuous") {
         return TrapType::CONTINUOUS;
-    }
-    else if (trapType == "Counter")
-    {
+    } else if (trapType == "Counter") {
         return TrapType::COUNTER;
     }
     throw std::domain_error("Invalid trap type " + trapType);
@@ -384,8 +259,7 @@ TrapType toTrapType(const std::string& trapType)
 
 std::string fromTrapType(TrapType trapType)
 {
-    switch (trapType)
-    {
+    switch (trapType) {
         case TrapType::NONE: return "None";
         case TrapType::NORMAL: return "Normal";
         case TrapType::CONTINUOUS: return "Continuous";
@@ -395,8 +269,7 @@ std::string fromTrapType(TrapType trapType)
 
 int toSpeed(SpellType type)
 {
-    switch(type)
-    {
+    switch(type) {
         case SpellType::NONE:
             return 0;
         case SpellType::NORMAL:
@@ -412,8 +285,7 @@ int toSpeed(SpellType type)
 
 int toSpeed(TrapType type)
 {
-    switch(type)
-    {
+    switch(type) {
         case TrapType::NONE:
             return 0;
         case TrapType::NORMAL:
@@ -426,80 +298,43 @@ int toSpeed(TrapType type)
 
 Location toLocation(const std::string& location)
 {
-    if (location == "Deck")
-    {
+    if (location == "Deck") {
         return Location::DECK;
-    }
-    else if (location == "Extra")
-    {
+    } else if (location == "Extra") {
         return Location::EXTRA;
-    }
-    else if (location == "Hand")
-    {
+    } else if (location == "Hand") {
         return Location::HAND;
-    }
-    else if (location == "Graveyard")
-    {
+    } else if (location == "Graveyard") {
         return Location::GRAVEYARD;
-    }
-    else if (location == "Banished")
-    {
+    } else if (location == "Banished") {
         return Location::BANISHED;
-    }
-    else if (location == "Limbo")
-    {
+    } else if (location == "Limbo") {
         return Location::LIMBO;
-    }
-    else if (location == "Field")
-    {
+    } else if (location == "Field") {
         return Location::FIELD;
-    }
-    else if (location == "LPendulum")
-    {
+    } else if (location == "LPendulum") {
         return Location::LPENDULUM;
-    }
-    else if (location == "RPendulum")
-    {
+    } else if (location == "RPendulum") {
         return Location::RPENDULUM;
-    }
-    else if (location == "M1")
-    {
+    } else if (location == "M1") {
         return Location::M1;
-    }
-    else if (location == "M2")
-    {
+    } else if (location == "M2") {
         return Location::M2;
-    }
-    else if (location == "M3")
-    {
+    } else if (location == "M3") {
         return Location::M3;
-    }
-    else if (location == "M4")
-    {
+    } else if (location == "M4") {
         return Location::M4;
-    }
-    else if (location == "M5")
-    {
+    } else if (location == "M5") {
         return Location::M5;
-    }
-    else if (location == "S1")
-    {
+    } else if (location == "S1") {
         return Location::S1;
-    }
-    else if (location == "S2")
-    {
+    } else if (location == "S2") {
         return Location::S2;
-    }
-    else if (location == "S3")
-    {
+    } else if (location == "S3") {
         return Location::S3;
-    }
-    else if (location == "S4")
-    {
+    } else if (location == "S4") {
         return Location::S4;
-    }
-    else if (location == "S5")
-    {
+    } else if (location == "S5") {
         return Location::S5;
     }
     throw std::domain_error("Invalid location " + location);
@@ -507,8 +342,7 @@ Location toLocation(const std::string& location)
 
 std::string fromLocation(Location location)
 {
-    switch (location)
-    {
+    switch (location) {
         case Location::DECK: return "Deck";
         case Location::EXTRA: return "Extra";
         case Location::HAND: return "Hand";
@@ -533,12 +367,9 @@ std::string fromLocation(Location location)
 
 Position toPosition(const std::string& position)
 {
-    if (position == "FaceDown")
-    {
+    if (position == "FaceDown") {
         return Position::FACEDOWN;
-    }
-    else if (position == "FaceUp")
-    {
+    } else if (position == "FaceUp") {
         return Position::FACEUP;
     }
     throw std::domain_error("Invalid position " + position);
@@ -546,8 +377,7 @@ Position toPosition(const std::string& position)
 
 std::string fromPosition(Position position)
 {
-    switch (position)
-    {
+    switch (position) {
         case Position::FACEDOWN: return "FaceDown";
         case Position::FACEUP: return "FaceUp";
     }
@@ -555,16 +385,11 @@ std::string fromPosition(Position position)
 
 BattlePosition toBattlePosition(const std::string& battlePosition)
 {
-    if (battlePosition == "None")
-    {
+    if (battlePosition == "None") {
         return BattlePosition::NONE;
-    }
-    else if (battlePosition == "Attack")
-    {
+    } else if (battlePosition == "Attack") {
         return BattlePosition::ATTACK;
-    }
-    else if (battlePosition == "Defense")
-    {
+    } else if (battlePosition == "Defense") {
         return BattlePosition::DEFENSE;
     }
     throw std::domain_error("Invalid battle position " + battlePosition);
@@ -572,8 +397,7 @@ BattlePosition toBattlePosition(const std::string& battlePosition)
 
 std::string fromBattlePosition(BattlePosition battlePosition)
 {
-    switch (battlePosition)
-    {
+    switch (battlePosition) {
         case BattlePosition::NONE: return "None";
         case BattlePosition::ATTACK: return "Attack";
         case BattlePosition::DEFENSE: return "Defense";
@@ -582,12 +406,9 @@ std::string fromBattlePosition(BattlePosition battlePosition)
 
 Format toFormat(const std::string& format)
 {
-    if (format == "Traditional")
-    {
+    if (format == "Traditional") {
         return Format::TRADITIONAL;
-    }
-    else if (format == "Advanced")
-    {
+    } else if (format == "Advanced") {
         return Format::ADVANCED;
     }
     throw std::domain_error("Invalid format " + format);
@@ -595,8 +416,7 @@ Format toFormat(const std::string& format)
 
 std::string fromFormat(Format format)
 {
-    switch (format)
-    {
+    switch (format) {
         case Format::TRADITIONAL: return "Traditional";
         case Format::ADVANCED: return "Advanced";
     }
@@ -604,24 +424,15 @@ std::string fromFormat(Format format)
 
 Limitation toLimitation(const std::string& limitation)
 {
-    if (limitation == "Illegal")
-    {
+    if (limitation == "Illegal") {
         return Limitation::ILLEGAL;
-    }
-    else if (limitation == "Forbidden")
-    {
+    } else if (limitation == "Forbidden") {
         return Limitation::FORBIDDEN;
-    }
-    else if (limitation == "Limited")
-    {
+    } else if (limitation == "Limited") {
         return Limitation::LIMITED;
-    }
-    else if (limitation == "Semi-limited")
-    {
+    } else if (limitation == "Semi-limited") {
         return Limitation::SEMILIMITED;
-    }
-    else if (limitation == "Unlimited")
-    {
+    } else if (limitation == "Unlimited") {
         return Limitation::UNLIMITED;
     }
     throw std::domain_error("Invalid limitation " + limitation);
@@ -629,8 +440,7 @@ Limitation toLimitation(const std::string& limitation)
 
 std::string fromLimitation(Limitation limitation)
 {
-    switch (limitation)
-    {
+    switch (limitation) {
         case Limitation::ILLEGAL: return "Illegal";
         case Limitation::FORBIDDEN: return "Forbidden";
         case Limitation::LIMITED: return "Limited";
@@ -641,16 +451,11 @@ std::string fromLimitation(Limitation limitation)
 
 DeckType toDeckType(const std::string& deckType)
 {
-    if (deckType == "Main")
-    {
+    if (deckType == "Main") {
         return DeckType::MAIN;
-    }
-    else if (deckType == "Side")
-    {
+    } else if (deckType == "Side") {
         return DeckType::SIDE;
-    }
-    else if (deckType == "Extra")
-    {
+    } else if (deckType == "Extra") {
         return DeckType::EXTRA;
     }
     throw std::domain_error("Invalid deck type " + deckType);
@@ -658,8 +463,7 @@ DeckType toDeckType(const std::string& deckType)
 
 std::string fromDeckType(DeckType deckType)
 {
-    switch (deckType)
-    {
+    switch (deckType) {
         case DeckType::MAIN: return "Main";
         case DeckType::SIDE: return "Side";
         case DeckType::EXTRA: return "Extra";
