@@ -27,6 +27,7 @@ struct StaticCardData
     // spell and trap only
     SpellType spellType;
     TrapType trapType;
+    std::string text;
 };
 
 }
