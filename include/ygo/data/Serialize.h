@@ -43,6 +43,9 @@ std::string fromLimitation(Limitation limitation);
 DeckType toDeckType(const std::string& deckType);
 std::string fromDeckType(DeckType deckType);
 
+CardMap toCardMap(const std::string& json);
+std::string fromCardMap(const CardMap cardMap);
+
 }
 }
 

@@ -1,6 +1,11 @@
 #include <ygo/data/Serialize.h>
 
+#include <sstream>
 #include <stdexcept>
+
+#define BOOST_SPIRIT_THREADSAFE
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>
 
 namespace ygo
 {
@@ -469,6 +474,106 @@ std::string fromDeckType(DeckType deckType)
         case DeckType::EXTRA: return "Extra";
     }
 }
+
+StaticCardData toCard(boost::property_tree::ptree pt)
+{
+    return StaticCardData{
+        pt.get<std::string>("name"),
+        toCardType(pt.get<std::string>("cardType")),
+        toAttribute(pt.get<std::string>("attribute")),
+        toMonsterType(pt.get<std::string>("monsterType")),
+        toType(pt.get<std::string>("type")),
+        toMonsterType(pt.get<std::string>("monsterAbility")),
+        pt.get<int>("level"),
+        pt.get<int>("attack"),
+        pt.get<int>("defense"),
+        pt.get<int>("lpendulum"),
+        pt.get<int>("rpendulum"),
+        toSpellType(pt.get<std::string>("spellType")),
+        toTrapType(pt.get<std::string>("trapType")),
+        pt.get<std::string>("text")
+    };
+}
+
+CardMap toCardMap(const std::string& json)
+{
+    std::stringstream ss;
+    ss << json;
+
+    boost::property_tree::ptree pt;
+    boost::property_tree::read_json(ss, pt);
+
+    std::vector<StaticCardData> main;
+    std::vector<StaticCardData> side;
+    std::vector<StaticCardData> extra;
+    for (auto&& item : pt.get_child("main")) {
+        main.push_back(toCard(item.second));
+    }
+    for (auto&& item : pt.get_child("side")) {
+        side.push_back(toCard(item.second));
+    }
+    for (auto&& item : pt.get_child("extra")) {
+        extra.push_back(toCard(item.second));
+    }
+
+    return {{DeckType::MAIN, main},
+        {DeckType::SIDE, side},
+        {DeckType::EXTRA, extra}};
+}
+
+void fromCard(boost::property_tree::ptree& pt, StaticCardData c)
+{
+    pt.put("name",c.name);
+    pt.put("cardType",fromCardType(c.cardType));
+    pt.put("attribute",fromAttribute(c.attribute));
+    pt.put("monsterType",fromMonsterType(c.monsterType));
+    pt.put("type",fromType(c.type));
+    pt.put("monsterAbility",fromMonsterType(c.monsterAbility));
+    pt.put("level",c.level);
+    pt.put("attack",c.attack);
+    pt.put("defense",c.defense);
+    pt.put("lpendulum",c.lpendulum);
+    pt.put("rpendulum",c.rpendulum);
+    pt.put("spellType",fromSpellType(c.spellType));
+    pt.put("trapType",fromTrapType(c.trapType));
+    pt.put("text",c.text);
+}
+
+std::string fromCardMap(const CardMap cardMap)
+{
+    auto mainDeck = cardMap.find(DeckType::MAIN)->second;
+    auto sideDeck = cardMap.find(DeckType::SIDE)->second;
+    auto extraDeck = cardMap.find(DeckType::EXTRA)->second;
+
+    boost::property_tree::ptree mainPt;
+    boost::property_tree::ptree sidePt;
+    boost::property_tree::ptree extraPt;
+    for (auto&& c : mainDeck) {
+        boost::property_tree::ptree card;
+        fromCard(card, c);
+        mainPt.push_back(std::make_pair("",card));
+    }
+    for (auto&& c : sideDeck) {
+        boost::property_tree::ptree card;
+        fromCard(card, c);
+        sidePt.push_back(std::make_pair("",card));
+    }
+    for (auto&& c : extraDeck) {
+        boost::property_tree::ptree card;
+        fromCard(card, c);
+        extraPt.push_back(std::make_pair("",card));
+    }
+
+    boost::property_tree::ptree pt;
+    pt.add_child("main", mainPt);
+    pt.add_child("side", sidePt);
+    pt.add_child("extra", extraPt);
+
+    std::stringstream ss;
+    boost::property_tree::write_json(ss, pt);
+    return ss.str();
+}
+
 
 }
 }
