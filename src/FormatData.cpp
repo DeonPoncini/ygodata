@@ -1,4 +1,4 @@
-#include "FormatData.h"
+#include <ygo/data/FormatData.h>
 
 namespace ygo
 {

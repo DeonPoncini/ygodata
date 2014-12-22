@@ -1,4 +1,4 @@
-#include "Serialize.h"
+#include <ygo/data/Serialize.h>
 
 #include <stdexcept>
 
