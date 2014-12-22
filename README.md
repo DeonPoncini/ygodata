@@ -28,3 +28,8 @@ The serialization functions convert all the data structures into string forms.
 CardMap is a data structure used to simulate a set of decks (main, side, extra).
 To serialize this to and from JSON for export and import helper functions are
 provided.
+
+License
+-------
+Copyright (c) 2014 Deon Poncini.
+See the LICENSE file for license rights and limitations (MIT)
