@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-project(libygodata)
+project(ygodata)
 
 set(DATA_VERSION "0.0.1")
 
@@ -40,7 +40,7 @@ target_link_libraries(ygodata
 ################################
 
 export_project(
-    NAME libygodata
+    NAME ygodata
     INCLUDES ${CMAKE_CURRENT_LIST_DIR}/include
     LIBS ygodata
     VERSION ${DATA_VERSION}
