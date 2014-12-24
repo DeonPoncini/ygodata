@@ -28,7 +28,7 @@ set(YGODATA_LIBS
 ################################
 # Build targets
 ################################
-add_library(ygodata SHARED
+add_library(ygodata
     ${SRC}
     ${INCLUDES})
 
