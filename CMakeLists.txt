@@ -8,7 +8,7 @@ set(DATA_VERSION "0.0.1")
 ################################
 find_package(Boost 1.55.0 COMPONENTS system thread REQUIRED)
 
-include_directories(${BOOST_INCLUDE_DIRS})
+include_directories(${Boost_INCLUDE_DIRS})
 
 ################################
 # Locate source
