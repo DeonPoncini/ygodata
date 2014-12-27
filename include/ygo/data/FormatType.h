@@ -6,30 +6,30 @@
 Z_NS_START(ygo)
 Z_NS_START(data)
 
-Z_ENUM_CLASS(ygo_data, Format)
+Z_ENUM_CLASS ZD(ygo)ZD(data)Format
 {
-    TRADITIONAL,
-    ADVANCED
+    ZD(ygo)ZD(data)ZD(Format)TRADITIONAL,
+    ZD(ygo)ZD(data)ZD(Format)ADVANCED
 };
 
-Z_ENUM_CLASS(ygo_data, Limitation)
+Z_ENUM_CLASS ZD(ygo)ZD(data)Limitation
 {
-    ILLEGAL,
-    FORBIDDEN,
-    LIMITED,
-    SEMILIMITED,
-    UNLIMITED
+    ZD(ygo)ZD(data)ZD(Limitation)ILLEGAL,
+    ZD(ygo)ZD(data)ZD(Limitation)FORBIDDEN,
+    ZD(ygo)ZD(data)ZD(Limitation)LIMITED,
+    ZD(ygo)ZD(data)ZD(Limitation)SEMILIMITED,
+    ZD(ygo)ZD(data)ZD(Limitation)UNLIMITED
 };
 
-Z_ENUM_CLASS(ygo_data, DeckType)
+Z_ENUM_CLASS ZD(ygo)ZD(data)DeckType
 {
-    MAIN,
-    SIDE,
-    EXTRA
+    ZD(ygo)ZD(data)ZD(DeckType)MAIN,
+    ZD(ygo)ZD(data)ZD(DeckType)SIDE,
+    ZD(ygo)ZD(data)ZD(DeckType)EXTRA
 };
 
-static const unsigned Z_VAR(ygo_data, ZONE_COUNT) = 5;
-static const unsigned Z_VAR(ygo_data, OPENING_HAND) = 5;
+static const unsigned ZD(ygo)ZD(data)ZONE_COUNT = 5;
+static const unsigned ZD(ygo)ZD(data)OPENING_HAND = 5;
 
 Z_NS_END
 Z_NS_END
