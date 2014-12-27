@@ -3,14 +3,14 @@
 
 #include <string>
 
+#include <zephyr/CExport.h>
+
 #include "CardType.h"
 
-namespace ygo
-{
-namespace data
-{
+Z_NS_START(ygo)
+Z_NS_START(data)
 
-struct StaticCardData
+Z_STRUCT(ygo_data, StaticCardData)
 {
     std::string name;
     CardType cardType;
@@ -31,7 +31,7 @@ struct StaticCardData
     std::string text;
 };
 
-}
-}
+Z_NS_END
+Z_NS_END
 
 #endif

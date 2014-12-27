@@ -7,8 +7,10 @@ set(DATA_VERSION "0.0.1")
 # Third party libraries
 ################################
 find_package(Boost 1.55.0 COMPONENTS system thread REQUIRED)
+find_package(zephyr)
 
 include_directories(${Boost_INCLUDE_DIRS})
+include_directories(${ZEPHYR_INCLUDE_DIRS})
 
 ################################
 # Locate source
@@ -23,6 +25,7 @@ include_directories(include)
 ################################
 set(YGODATA_LIBS
     ${Boost_LIBRARIES}
+    ${ZEPHYR_LIBRARIES}
     )
 
 ################################

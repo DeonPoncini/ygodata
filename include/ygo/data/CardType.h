@@ -1,19 +1,19 @@
 #ifndef YGO_DATA_CARDTYPE_H
 #define YGO_DATA_CARDTYPE_H
 
-namespace ygo
-{
-namespace data
-{
+#include <zephyr/CExport.h>
 
-enum class CardType
+Z_NS_START(ygo)
+Z_NS_START(data)
+
+Z_ENUM_CLASS(ygo_data, CardType)
 {
     MONSTER,
     SPELL,
     TRAP
 };
 
-enum class MonsterType
+Z_ENUM_CLASS(ygo_data, MonsterType)
 {
     NONE,
     NORMAL,
@@ -32,7 +32,7 @@ enum class MonsterType
     TUNER
 };
 
-enum class SpellType
+Z_ENUM_CLASS(ygo_data, SpellType)
 {
     NONE,
     NORMAL,
@@ -43,7 +43,7 @@ enum class SpellType
     RITUAL
 };
 
-enum class TrapType
+Z_ENUM_CLASS(ygo_data, TrapType)
 {
     NONE,
     NORMAL,
@@ -51,7 +51,7 @@ enum class TrapType
     COUNTER
 };
 
-enum class Attribute
+Z_ENUM_CLASS(ygo_data, Attribute)
 {
     NONE,
     DARK,
@@ -63,7 +63,7 @@ enum class Attribute
     WIND
 };
 
-enum class Type
+Z_ENUM_CLASS(ygo_data, Type)
 {
     NONE,
     AQUA,
@@ -92,7 +92,7 @@ enum class Type
     ZOMBIE
 };
 
-enum class Location
+Z_ENUM_CLASS(ygo_data, Location)
 {
     FIELD,
     M1,
@@ -115,20 +115,20 @@ enum class Location
     LIMBO
 };
 
-enum class Position
+Z_ENUM_CLASS(ygo_data, Position)
 {
     FACEDOWN,
     FACEUP
 };
 
-enum class BattlePosition
+Z_ENUM_CLASS(ygo_data, BattlePosition)
 {
     NONE,
     ATTACK,
     DEFENSE
 };
 
-}
-}
+Z_NS_END
+Z_NS_END
 
 #endif
