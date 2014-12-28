@@ -9,7 +9,7 @@ struct ygo_data_C_StaticCardData
 {
     char* name;
     ZU(ygo)ZU(data)CardType cardType;
-    // monster only
+    /* monster only */
     ZU(ygo)ZU(data)Attribute attribute;
     ZU(ygo)ZU(data)MonsterType monsterType;
     ZU(ygo)ZU(data)Type type;
@@ -19,10 +19,10 @@ struct ygo_data_C_StaticCardData
     int defense;
     int lpendulum;
     int rpendulum;
-    // spell and trap only
+    /* spell and trap only */
     ZU(ygo)ZU(data)SpellType spellType;
     ZU(ygo)ZU(data)TrapType trapType;
-    // card text
+    /* card text */
     char* text;
 };
 
