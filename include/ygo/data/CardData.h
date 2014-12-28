@@ -5,6 +5,8 @@
 
 #include "CardType.h"
 
+struct ygo_data_C_StaticCardData;
+
 namespace ygo
 {
 namespace data
@@ -30,6 +32,9 @@ struct StaticCardData
     // card text
     std::string text;
 };
+
+ygo_data_C_StaticCardData* staticDataToC(const StaticCardData& s);
+void deleteCStaticData(ygo_data_C_StaticCardData* c);
 
 }
 }
