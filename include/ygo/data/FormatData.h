@@ -1,8 +1,7 @@
 #ifndef YGO_DATA_FORMATDATA_H
 #define YGO_DATA_FORMATDATA_H
 
-#include "CardData.h"
-#include "FormatType.h"
+#include <ygo/data/cpp/DataTypes.h>
 
 #include <map>
 #include <vector>

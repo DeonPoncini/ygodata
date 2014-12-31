@@ -19,6 +19,7 @@ file(GLOB_RECURSE INCLUDES include/*.h)
 file(GLOB_RECURSE SRC src/*.cpp)
 
 include_directories(include)
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/include)
 
 ################################
 # Libraries
@@ -34,19 +35,21 @@ set(YGODATA_LIBS
 add_library(ygodata
     ${SRC}
     ${INCLUDES}
-    ${CMAKE_CURRENT_BINARY_DIR}/include/cpp/ygo/data/DataTypes.h)
+    ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/cpp/DataTypes.h)
 
 target_link_libraries(ygodata
     ${YGODATA_LIBS})
 
-make_directory(${CMAKE_CURRENT_BINARY_DIR}/include/cpp/ygo/data)
+make_directory(${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/cpp)
+make_directory(${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/c)
+make_directory(${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/java)
 
 add_custom_command(OUTPUT
-    ${CMAKE_CURRENT_BINARY_DIR}/include/cpp/ygo/data/DataTypes.h
+    ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/cpp/DataTypes.h
     COMMAND python
-    ARGS ${CMAKE_CURRENT_LIST_DIR}/scripts/generate-data
+    ARGS $ENV{PROJECT_SCRIPT_DIR}/include/generate-data.py
     ${CMAKE_CURRENT_LIST_DIR}/xml/data.xml
-    ${CMAKE_CURRENT_BINARY_DIR}/include/cpp/ygo/data)
+    ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data)
 
 ################################
 # Export library

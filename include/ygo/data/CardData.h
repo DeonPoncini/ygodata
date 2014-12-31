@@ -3,38 +3,16 @@
 
 #include <string>
 
-#include "CardType.h"
-
-struct ygo_data_C_StaticCardData;
+#include <ygo/data/c/DataTypes.h>
+#include <ygo/data/cpp/DataTypes.h>
 
 namespace ygo
 {
 namespace data
 {
 
-struct StaticCardData
-{
-    std::string name;
-    CardType cardType;
-    // monster only
-    Attribute attribute;
-    MonsterType monsterType;
-    Type type;
-    MonsterType monsterAbility;
-    int level;
-    int attack;
-    int defense;
-    int lpendulum;
-    int rpendulum;
-    // spell and trap only
-    SpellType spellType;
-    TrapType trapType;
-    // card text
-    std::string text;
-};
-
-ygo_data_C_StaticCardData* staticDataToC(const StaticCardData& s);
-void deleteCStaticData(ygo_data_C_StaticCardData* c);
+ygo_data_StaticCardData* staticDataToC(const StaticCardData& s);
+void deleteCStaticData(ygo_data_StaticCardData* c);
 
 }
 }

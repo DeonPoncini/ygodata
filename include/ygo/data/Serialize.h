@@ -1,7 +1,8 @@
 #ifndef YGO_DATA_SERIALIZE_H
 #define YGO_DATA_SERIALIZE_H
 
-#include "CardData.h"
+#include <ygo/data/cpp/DataTypes.h>
+
 #include "FormatData.h"
 
 namespace ygo
