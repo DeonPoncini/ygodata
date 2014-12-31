@@ -33,10 +33,20 @@ set(YGODATA_LIBS
 ################################
 add_library(ygodata
     ${SRC}
-    ${INCLUDES})
+    ${INCLUDES}
+    ${CMAKE_CURRENT_BINARY_DIR}/include/cpp/ygo/data/DataTypes.h)
 
 target_link_libraries(ygodata
     ${YGODATA_LIBS})
+
+make_directory(${CMAKE_CURRENT_BINARY_DIR}/include/cpp/ygo/data)
+
+add_custom_command(OUTPUT
+    ${CMAKE_CURRENT_BINARY_DIR}/include/cpp/ygo/data/DataTypes.h
+    COMMAND python
+    ARGS ${CMAKE_CURRENT_LIST_DIR}/scripts/generate-data
+    ${CMAKE_CURRENT_LIST_DIR}/xml/data.xml
+    ${CMAKE_CURRENT_BINARY_DIR}/include/cpp/ygo/data)
 
 ################################
 # Export library
@@ -44,7 +54,7 @@ target_link_libraries(ygodata
 
 export_project(
     NAME ygodata
-    INCLUDES ${CMAKE_CURRENT_LIST_DIR}/include
+    INCLUDES ${CMAKE_CURRENT_LIST_DIR}/include ${CMAKE_CURRENT_BINARY_DIR}/include
     LIBS ygodata
     VERSION ${DATA_VERSION}
 )
