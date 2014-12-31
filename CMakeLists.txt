@@ -40,10 +40,6 @@ add_library(ygodata
 target_link_libraries(ygodata
     ${YGODATA_LIBS})
 
-make_directory(${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/cpp)
-make_directory(${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/c)
-make_directory(${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/java)
-
 add_custom_command(OUTPUT
     ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/cpp/DataTypes.h
     COMMAND python
