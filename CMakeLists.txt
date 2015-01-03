@@ -60,5 +60,5 @@ export_project(
 
 export_java_project(
     NAME ygodata-java
-    JAR_PATHS ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/java
+    INCLUDES ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/java
 )
