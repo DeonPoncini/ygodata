@@ -62,3 +62,5 @@ export_java_project(
     NAME ygodata-java
     INCLUDES ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/java
 )
+
+add_subdirectory(binding)
