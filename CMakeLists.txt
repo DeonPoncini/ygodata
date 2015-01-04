@@ -7,6 +7,7 @@ set(DATA_VERSION "0.0.1")
 # Third party libraries
 ################################
 find_package(Boost 1.55.0 COMPONENTS system REQUIRED)
+find_package(jniw)
 find_package(zephyr)
 
 include_directories(${Boost_INCLUDE_DIRS})
