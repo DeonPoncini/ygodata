@@ -60,4 +60,9 @@ export_project(
     VERSION ${DATA_VERSION}
 )
 
+################################
+# Unit tests
+################################
+add_unit_tests(NAME ygodata)
+
 add_subdirectory(binding)
