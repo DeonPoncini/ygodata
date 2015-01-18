@@ -3,6 +3,8 @@
 #include <sstream>
 #include <stdexcept>
 
+#include <kizhi/Log.h>
+
 #define BOOST_SPIRIT_THREADSAFE
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
@@ -17,6 +19,7 @@ CardType toCardType(const std::string& cardType)
          if (cardType == "Monster") return CardType::MONSTER;
     else if (cardType == "Spell")   return CardType::SPELL;
     else if (cardType == "Trap")    return CardType::TRAP;
+    KIZHI_FATAL_F << "Invalid card type " << cardType;
     throw std::domain_error("Invalid card type " + cardType);
 }
 
@@ -39,6 +42,7 @@ Attribute toAttribute(const std::string& attribute)
     else if (attribute == "LIGHT")  return Attribute::LIGHT;
     else if (attribute == "WATER")  return Attribute::WATER;
     else if (attribute == "WIND")   return Attribute::WIND;
+    KIZHI_FATAL_F << "Invalid attribute " << attribute;
     throw std::domain_error("Invalid attribute " + attribute);
 }
 
@@ -83,6 +87,7 @@ Type toType(const std::string& type)
     else if (type == "Winged Beast")  return Type::WINGEDBEAST;
     else if (type == "Wyrm")          return Type::WYRM;
     else if (type == "Zombie")        return Type::ZOMBIE;
+    KIZHI_FATAL_F << "Invalid type " << type;
     throw std::domain_error("Invalid type " + type);
 }
 
@@ -135,6 +140,7 @@ MonsterType toMonsterType(const std::string& monsterType)
     else if (monsterType == "Union")    return MonsterType::UNION;
     else if (monsterType == "Gemini")   return MonsterType::GEMINI;
     else if (monsterType == "Tuner")    return MonsterType::TUNER;
+    KIZHI_FATAL_F << "Invalid monster type " << monsterType;
     throw std::domain_error("Invalid monster type " + monsterType);
 }
 
@@ -168,6 +174,7 @@ SpellType toSpellType(const std::string& spellType)
     else if (spellType == "Equip")      return SpellType::EQUIP;
     else if (spellType == "Quick-Play") return SpellType::QUICK;
     else if (spellType == "Ritual")     return SpellType::RITUAL;
+    KIZHI_FATAL_F << "Invalid spell type " << spellType;
     throw std::domain_error("Invalid spell type " + spellType);
 }
 
@@ -190,6 +197,7 @@ TrapType toTrapType(const std::string& trapType)
     else if (trapType == "Normal")     return TrapType::NORMAL;
     else if (trapType == "Continuous") return TrapType::CONTINUOUS;
     else if (trapType == "Counter")    return TrapType::COUNTER;
+    KIZHI_FATAL_F << "Invalid trap type " << trapType;
     throw std::domain_error("Invalid trap type " + trapType);
 }
 
@@ -247,6 +255,7 @@ Location toLocation(const std::string& location)
     else if (location == "S3")        return Location::S3;
     else if (location == "S4")        return Location::S4;
     else if (location == "S5")        return Location::S5;
+    KIZHI_FATAL_F << "Invalid location " << location;
     throw std::domain_error("Invalid location " + location);
 }
 
@@ -279,6 +288,7 @@ Position toPosition(const std::string& position)
 {
          if (position == "FaceDown") return Position::FACEDOWN;
     else if (position == "FaceUp")   return Position::FACEUP;
+    KIZHI_FATAL_F << "Invalid position " << position;
     throw std::domain_error("Invalid position " + position);
 }
 
@@ -295,6 +305,7 @@ BattlePosition toBattlePosition(const std::string& battlePosition)
          if (battlePosition == "None")    return BattlePosition::NONE;
     else if (battlePosition == "Attack")  return BattlePosition::ATTACK;
     else if (battlePosition == "Defense") return BattlePosition::DEFENSE;
+    KIZHI_FATAL_F << "Invalid battle position " << battlePosition;
     throw std::domain_error("Invalid battle position " + battlePosition);
 }
 
@@ -311,6 +322,7 @@ Format toFormat(const std::string& format)
 {
          if (format == "Traditional")  return Format::TRADITIONAL;
     else if (format == "Advanced")     return Format::ADVANCED;
+    KIZHI_FATAL_F << "Invalid format " << format;
     throw std::domain_error("Invalid format " + format);
 }
 
@@ -329,6 +341,7 @@ Limitation toLimitation(const std::string& limitation)
     else if (limitation == "Limited")      return Limitation::LIMITED;
     else if (limitation == "Semi-limited") return Limitation::SEMILIMITED;
     else if (limitation == "Unlimited")    return Limitation::UNLIMITED;
+    KIZHI_FATAL_F << "Invalid limitation " << limitation;
     throw std::domain_error("Invalid limitation " + limitation);
 }
 
@@ -348,6 +361,7 @@ DeckType toDeckType(const std::string& deckType)
          if (deckType == "Main")  return DeckType::MAIN;
     else if (deckType == "Side")  return DeckType::SIDE;
     else if (deckType == "Extra") return DeckType::EXTRA;
+    KIZHI_FATAL_F << "Invalid deck type " << deckType;
     throw std::domain_error("Invalid deck type " + deckType);
 }
 

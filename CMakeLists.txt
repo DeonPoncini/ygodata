@@ -7,9 +7,13 @@ set(DATA_VERSION "0.0.1")
 # Third party libraries
 ################################
 find_package(Boost 1.55.0 COMPONENTS system thread atomic REQUIRED)
+
+find_package(kizhi)
 find_package(zephyr)
 
 include_directories(${Boost_INCLUDE_DIRS})
+
+include_directories(${KIZHI_INCLUDE_DIRS})
 include_directories(${ZEPHYR_INCLUDE_DIRS})
 
 ################################
@@ -26,6 +30,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}/include)
 ################################
 set(YGODATA_LIBS
     ${Boost_LIBRARIES}
+    ${KIZHI_LIBRARIES}
     ${ZEPHYR_LIBRARIES}
     )
 
