@@ -53,14 +53,16 @@ add_custom_command(OUTPUT
 
 export_project(
     NAME ygodata
-    INCLUDES ${CMAKE_CURRENT_LIST_DIR}/include ${CMAKE_CURRENT_BINARY_DIR}/include
+    INCLUDES ${CMAKE_CURRENT_LIST_DIR}/include
+        ${CMAKE_CURRENT_BINARY_DIR}/include
     LIBS ygodata
     VERSION ${DATA_VERSION}
 )
 
-export_java_project(
+export_project(
     NAME ygodata-java
     INCLUDES ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/java
+    VERSION ${DATA_VERSION}
 )
 
 add_subdirectory(binding)
