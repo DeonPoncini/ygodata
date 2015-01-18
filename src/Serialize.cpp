@@ -62,9 +62,9 @@ Type toType(const std::string& type)
     else if (type == "Aqua")          return Type::AQUA;
     else if (type == "Beast")         return Type::BEAST;
     else if (type == "Beast-Warrior") return Type::BEASTWARRIOR;
-    else if (type == "CreatorGod")    return Type::CREATORGOD;
+    else if (type == "Creator God")   return Type::CREATORGOD;
     else if (type == "Dinosaur")      return Type::DINOSAUR;
-    else if (type == "DivineBeast")   return Type::DIVINEBEAST;
+    else if (type == "Divine-Beast")  return Type::DIVINEBEAST;
     else if (type == "Dragon")        return Type::DRAGON;
     else if (type == "Fairy")         return Type::FAIRY;
     else if (type == "Fiend")         return Type::FIEND;
@@ -93,9 +93,9 @@ std::string fromType(Type type)
         case Type::AQUA:         return "Aqua";
         case Type::BEAST:        return "Beast";
         case Type::BEASTWARRIOR: return "Beast-Warrior";
-        case Type::CREATORGOD:   return "CreatorGod";
+        case Type::CREATORGOD:   return "Creator God";
         case Type::DINOSAUR:     return "Dinosaur";
-        case Type::DIVINEBEAST:  return "DivineBeast";
+        case Type::DIVINEBEAST:  return "Divine-Beast";
         case Type::DRAGON:       return "Dragon";
         case Type::FAIRY:        return "Fairy";
         case Type::FIEND:        return "Fiend";
