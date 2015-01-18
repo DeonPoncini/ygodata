@@ -55,13 +55,8 @@ export_project(
     NAME ygodata
     INCLUDES ${CMAKE_CURRENT_LIST_DIR}/include
         ${CMAKE_CURRENT_BINARY_DIR}/include
+    JAVA_INCLUDES ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/java
     LIBS ygodata
-    VERSION ${DATA_VERSION}
-)
-
-export_project(
-    NAME ygodata-java
-    INCLUDES ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/java
     VERSION ${DATA_VERSION}
 )
 
