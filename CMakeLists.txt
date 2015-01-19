@@ -61,6 +61,7 @@ export_project(
     INCLUDES ${CMAKE_CURRENT_LIST_DIR}/include
         ${CMAKE_CURRENT_BINARY_DIR}/include
     JAVA_INCLUDES ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/java
+    PYTHON_INCLUDES ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/python
     LIBS ygodata
     VERSION ${DATA_VERSION}
 )
