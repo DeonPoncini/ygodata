@@ -70,5 +70,3 @@ export_project(
 # Unit tests
 ################################
 add_unit_tests(NAME ygodata)
-
-add_subdirectory(binding)
