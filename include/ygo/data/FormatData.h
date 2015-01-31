@@ -11,9 +11,9 @@ namespace ygo
 namespace data
 {
 
-int DeckMax(DeckType deckType);
-int DeckMin(DeckType deckType);
-int CardLimitation(Limitation limitation, Format format);
+int deckMax(DeckType deckType);
+int deckMin(DeckType deckType);
+int cardLimitation(Limitation limitation, Format format);
 
 typedef std::map<DeckType,std::vector<StaticCardData>> CardMap;
 

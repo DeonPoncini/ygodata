@@ -5,7 +5,7 @@ namespace ygo
 namespace data
 {
 
-int DeckMax(DeckType deckType)
+int deckMax(DeckType deckType)
 {
     switch (deckType) {
         case DeckType::MAIN: return 60;
@@ -14,7 +14,7 @@ int DeckMax(DeckType deckType)
     }
 }
 
-int DeckMin(DeckType deckType)
+int deckMin(DeckType deckType)
 {
     switch (deckType) {
         case DeckType::MAIN: return 40;
@@ -23,7 +23,7 @@ int DeckMin(DeckType deckType)
     }
 }
 
-int CardLimitation(Limitation limitation, Format format)
+int cardLimitation(Limitation limitation, Format format)
 {
     switch (limitation) {
         case Limitation::ILLEGAL: return 0;
