@@ -322,6 +322,7 @@ Format toFormat(const std::string& format)
 {
          if (format == "Traditional")  return Format::TRADITIONAL;
     else if (format == "Advanced")     return Format::ADVANCED;
+    else if (format == "MegaBanned")   return Format::MEGABANNED;
     KIZHI_FATAL_F << "Invalid format " << format;
     throw std::domain_error("Invalid format " + format);
 }
@@ -331,6 +332,7 @@ std::string fromFormat(Format format)
     switch (format) {
         case Format::TRADITIONAL: return "Traditional";
         case Format::ADVANCED:    return "Advanced";
+        case Format::MEGABANNED:  return "MegaBanned";
     }
 }
 

@@ -31,12 +31,24 @@ int CardLimitation(Limitation limitation, Format format)
             switch (format) {
                 case Format::TRADITIONAL: return 1;
                 case Format::ADVANCED: return 0;
+                case Format::MEGABANNED: return 0;
             }
         }
-        case Limitation::LIMITED: return 1;
-        case Limitation::SEMILIMITED: return 2;
+        case Limitation::LIMITED:
+            switch (format) {
+                case Format::TRADITIONAL: return 1;
+                case Format::ADVANCED: return 1;
+                case Format::MEGABANNED: return 0;
+            }
+        case Limitation::SEMILIMITED:
+            switch (format) {
+                case Format::TRADITIONAL: return 2;
+                case Format::ADVANCED: return 2;
+                case Format::MEGABANNED: return 0;
+            }
         case Limitation::UNLIMITED: return 3;
     }
 }
+
 }
 }

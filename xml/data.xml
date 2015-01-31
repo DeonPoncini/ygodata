@@ -120,6 +120,7 @@
     <enum name="Format">
         <entry>TRADITIONAL</entry>
         <entry>ADVANCED</entry>
+        <entry>MEGABANNED</entry>
     </enum>
 
     <enum name="Limitation">
