@@ -9,6 +9,7 @@ set(DATA_VERSION "0.0.1")
 find_package(Boost 1.55.0 COMPONENTS system thread atomic REQUIRED)
 
 find_package(kizhi)
+find_package(sinc)
 find_package(zephyr)
 
 include_directories(${Boost_INCLUDE_DIRS})
@@ -48,7 +49,7 @@ target_link_libraries(ygodata
 add_custom_command(OUTPUT
     ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data/cpp/DataTypes.h
     COMMAND python
-    ARGS $ENV{PROJECT_SCRIPT_DIR}/include/generate-data.py
+    ARGS ${SINC_PYTHON_INCLUDE_DIRS}/sinc.py
     ${CMAKE_CURRENT_LIST_DIR}/xml/data.xml
     ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data)
 
