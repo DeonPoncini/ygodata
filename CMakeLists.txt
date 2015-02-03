@@ -51,7 +51,8 @@ add_custom_command(OUTPUT
     COMMAND python
     ARGS ${SINC_PYTHON_INCLUDE_DIRS}/sinc.py
     ${CMAKE_CURRENT_LIST_DIR}/xml/data.xml
-    ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data)
+    ${CMAKE_CURRENT_BINARY_DIR}/include/ygo/data
+    ${SINC_DATA}/schema.xsd)
 
 ################################
 # Export library

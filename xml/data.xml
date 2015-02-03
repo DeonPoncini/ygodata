@@ -1,159 +1,284 @@
 <data name="DataTypes">
-    <package uri="sectorsoftware.net">
-        <namespace>ygo</namespace>
-        <namespace>data</namespace>
+    <package>
+        <uri>sectorsoftware.net</uri>
+        <namespaces>
+            <namespace>ygo</namespace>
+            <namespace>data</namespace>
+        </namespaces>
     </package>
 
-    <enum name="CardType">
-        <entry>MONSTER</entry>
-        <entry>SPELL</entry>
-        <entry>TRAP</entry>
+    <enum>
+        <name>CardType</name>
+        <entries>
+            <entry>MONSTER</entry>
+            <entry>SPELL</entry>
+            <entry>TRAP</entry>
+        </entries>
     </enum>
 
-    <enum name="MonsterType">
-        <entry>NONE</entry>
-        <entry>NORMAL</entry>
-        <entry>EFFECT</entry>
-        <entry>RITUAL</entry>
-        <entry>FUSION</entry>
-        <entry>SYNCHRO</entry>
-        <entry>XYZ</entry>
-        <entry>PENDULUM</entry>
-        <entry>TOKEN</entry>
-        <entry>FLIP</entry>
-        <entry>TOON</entry>
-        <entry>SPIRIT</entry>
-        <entry>UNION</entry>
-        <entry>GEMINI</entry>
-        <entry>TUNER</entry>
+    <enum>
+        <name>MonsterType</name>
+        <entries>
+            <entry>NONE</entry>
+            <entry>NORMAL</entry>
+            <entry>EFFECT</entry>
+            <entry>RITUAL</entry>
+            <entry>FUSION</entry>
+            <entry>SYNCHRO</entry>
+            <entry>XYZ</entry>
+            <entry>PENDULUM</entry>
+            <entry>TOKEN</entry>
+            <entry>FLIP</entry>
+            <entry>TOON</entry>
+            <entry>SPIRIT</entry>
+            <entry>UNION</entry>
+            <entry>GEMINI</entry>
+            <entry>TUNER</entry>
+        </entries>
     </enum>
 
-    <enum name="SpellType">
-        <entry>NONE</entry>
-        <entry>NORMAL</entry>
-        <entry>CONTINUOUS</entry>
-        <entry>FIELD</entry>
-        <entry>EQUIP</entry>
-        <entry>QUICK</entry>
-        <entry>RITUAL</entry>
+    <enum>
+        <name>SpellType</name>
+        <entries>
+            <entry>NONE</entry>
+            <entry>NORMAL</entry>
+            <entry>CONTINUOUS</entry>
+            <entry>FIELD</entry>
+            <entry>EQUIP</entry>
+            <entry>QUICK</entry>
+            <entry>RITUAL</entry>
+        </entries>
     </enum>
 
-    <enum name="TrapType">
-        <entry>NONE</entry>
-        <entry>NORMAL</entry>
-        <entry>CONTINUOUS</entry>
-        <entry>COUNTER</entry>
+    <enum>
+        <name>TrapType</name>
+        <entries>
+            <entry>NONE</entry>
+            <entry>NORMAL</entry>
+            <entry>CONTINUOUS</entry>
+            <entry>COUNTER</entry>
+        </entries>
     </enum>
 
-    <enum name="Attribute">
-        <entry>NONE</entry>
-        <entry>DARK</entry>
-        <entry>DIVINE</entry>
-        <entry>EARTH</entry>
-        <entry>FIRE</entry>
-        <entry>LIGHT</entry>
-        <entry>WATER</entry>
-        <entry>WIND</entry>
+    <enum>
+        <name>Attribute</name>
+        <entries>
+            <entry>NONE</entry>
+            <entry>DARK</entry>
+            <entry>DIVINE</entry>
+            <entry>EARTH</entry>
+            <entry>FIRE</entry>
+            <entry>LIGHT</entry>
+            <entry>WATER</entry>
+            <entry>WIND</entry>
+        </entries>
     </enum>
 
-    <enum name="Type">
-        <entry>NONE</entry>
-        <entry>AQUA</entry>
-        <entry>BEAST</entry>
-        <entry>BEASTWARRIOR</entry>
-        <entry>CREATORGOD</entry>
-        <entry>DINOSAUR</entry>
-        <entry>DIVINEBEAST</entry>
-        <entry>DRAGON</entry>
-        <entry>FAIRY</entry>
-        <entry>FIEND</entry>
-        <entry>FISH</entry>
-        <entry>INSECT</entry>
-        <entry>MACHINE</entry>
-        <entry>PLANT</entry>
-        <entry>PSYCHIC</entry>
-        <entry>PYRO</entry>
-        <entry>REPTILE</entry>
-        <entry>ROCK</entry>
-        <entry>SEASERPENT</entry>
-        <entry>SPELLCASTER</entry>
-        <entry>THUNDER</entry>
-        <entry>WARRIOR</entry>
-        <entry>WINGEDBEAST</entry>
-        <entry>WYRM</entry>
-        <entry>ZOMBIE</entry>
+    <enum>
+        <name>Type</name>
+        <entries>
+            <entry>NONE</entry>
+            <entry>AQUA</entry>
+            <entry>BEAST</entry>
+            <entry>BEASTWARRIOR</entry>
+            <entry>CREATORGOD</entry>
+            <entry>DINOSAUR</entry>
+            <entry>DIVINEBEAST</entry>
+            <entry>DRAGON</entry>
+            <entry>FAIRY</entry>
+            <entry>FIEND</entry>
+            <entry>FISH</entry>
+            <entry>INSECT</entry>
+            <entry>MACHINE</entry>
+            <entry>PLANT</entry>
+            <entry>PSYCHIC</entry>
+            <entry>PYRO</entry>
+            <entry>REPTILE</entry>
+            <entry>ROCK</entry>
+            <entry>SEASERPENT</entry>
+            <entry>SPELLCASTER</entry>
+            <entry>THUNDER</entry>
+            <entry>WARRIOR</entry>
+            <entry>WINGEDBEAST</entry>
+            <entry>WYRM</entry>
+            <entry>ZOMBIE</entry>
+        </entries>
     </enum>
 
-    <enum name="Location">
-        <entry>FIELD</entry>
-        <entry>M1</entry>
-        <entry>M2</entry>
-        <entry>M3</entry>
-        <entry>M4</entry>
-        <entry>M5</entry>
-        <entry>GRAVEYARD</entry>
-        <entry>LPENDULUM</entry>
-        <entry>RPENDULUM</entry>
-        <entry>EXTRA</entry>
-        <entry>S1</entry>
-        <entry>S2</entry>
-        <entry>S3</entry>
-        <entry>S4</entry>
-        <entry>S5</entry>
-        <entry>DECK</entry>
-        <entry>HAND</entry>
-        <entry>BANISHED</entry>
-        <entry>LIMBO</entry>
+    <enum>
+        <name>Location</name>
+        <entries>
+            <entry>FIELD</entry>
+            <entry>M1</entry>
+            <entry>M2</entry>
+            <entry>M3</entry>
+            <entry>M4</entry>
+            <entry>M5</entry>
+            <entry>GRAVEYARD</entry>
+            <entry>LPENDULUM</entry>
+            <entry>RPENDULUM</entry>
+            <entry>EXTRA</entry>
+            <entry>S1</entry>
+            <entry>S2</entry>
+            <entry>S3</entry>
+            <entry>S4</entry>
+            <entry>S5</entry>
+            <entry>DECK</entry>
+            <entry>HAND</entry>
+            <entry>BANISHED</entry>
+            <entry>LIMBO</entry>
+        </entries>
     </enum>
 
-    <enum name="Position">
-        <entry>FACEDOWN</entry>
-        <entry>FACEUP</entry>
+    <enum>
+        <name>Position</name>
+        <entries>
+            <entry>FACEDOWN</entry>
+            <entry>FACEUP</entry>
+        </entries>
     </enum>
 
-    <enum name="BattlePosition">
-        <entry>NONE</entry>
-        <entry>ATTACK</entry>
-        <entry>DEFENSE</entry>
+    <enum>
+        <name>BattlePosition</name>
+        <entries>
+            <entry>NONE</entry>
+            <entry>ATTACK</entry>
+            <entry>DEFENSE</entry>
+        </entries>
     </enum>
 
-    <enum name="Format">
-        <entry>TRADITIONAL</entry>
-        <entry>ADVANCED</entry>
-        <entry>MEGABANNED</entry>
+    <enum>
+        <name>Format</name>
+        <entries>
+            <entry>TRADITIONAL</entry>
+            <entry>ADVANCED</entry>
+            <entry>MEGABANNED</entry>
+        </entries>
     </enum>
 
-    <enum name="Limitation">
-        <entry>ILLEGAL</entry>
-        <entry>FORBIDDEN</entry>
-        <entry>LIMITED</entry>
-        <entry>SEMILIMITED</entry>
-        <entry>UNLIMITED</entry>
+    <enum>
+        <name>Limitation</name>
+        <entries>
+            <entry>ILLEGAL</entry>
+            <entry>FORBIDDEN</entry>
+            <entry>LIMITED</entry>
+            <entry>SEMILIMITED</entry>
+            <entry>UNLIMITED</entry>
+        </entries>
     </enum>
 
-    <enum name="DeckType">
-        <entry>MAIN</entry>
-        <entry>SIDE</entry>
-        <entry>EXTRA</entry>
+    <enum>
+        <name>DeckType</name>
+        <entries>
+            <entry>MAIN</entry>
+            <entry>SIDE</entry>
+            <entry>EXTRA</entry>
+        </entries>
     </enum>
 
-    <constant type="unsigned" name="ZONE_COUNT">5</constant>
-    <constant type="unsigned" name="OPENING_HAND">5</constant>
+    <assignment>
+        <typedecl>
+            <type><base>unsigned</base></type>
+        </typedecl>
+        <name>ZONE_COUNT</name>
+        <value>5</value>
+    </assignment>
 
-    <struct name="StaticCardData">
-        <element type="string">name</element>
-        <element type="CardType">cardType</element>
-        <element type="Attribute">attribute</element>
-        <element type="MonsterType">monsterType</element>
-        <element type="Type">type</element>
-        <element type="MonsterType">monsterAbility</element>
-        <element type="int">level</element>
-        <element type="int">attack</element>
-        <element type="int">defense</element>
-        <element type="int">lpendulum</element>
-        <element type="int">rpendulum</element>
-        <element type="SpellType">spellType</element>
-        <element type="TrapType">trapType</element>
-        <element type="string">text</element>
+    <assignment>
+        <typedecl>
+            <type><base>unsigned</base></type>
+        </typedecl>
+        <name>OPENING_HAND</name>
+        <value>5</value>
+    </assignment>
+
+    <struct>
+        <name>StaticCardData</name>
+        <declarations>
+            <declaration>
+                <typedecl>
+                    <type><base>string</base></type>
+                </typedecl>
+                <name>name</name>
+            </declaration>
+            <declaration>
+                <typedecl>
+                    <type><base>CardType</base></type>
+                </typedecl>
+                <name>cardType</name>
+            </declaration>
+            <declaration>
+                <typedecl>
+                    <type><base>Attribute</base></type>
+                </typedecl>
+                <name>attribute</name>
+            </declaration>
+            <declaration>
+                <typedecl>
+                    <type><base>MonsterType</base></type>
+                </typedecl>
+                <name>monsterType</name>
+            </declaration>
+            <declaration>
+                <typedecl>
+                    <type><base>Type</base></type>
+                </typedecl>
+                <name>type</name>
+            </declaration>
+            <declaration>
+                <typedecl>
+                    <type><base>MonsterType</base></type>
+                </typedecl>
+                <name>monsterAbility</name>
+            </declaration>
+            <declaration>
+                <typedecl>
+                    <type><base>int</base></type>
+                </typedecl>
+                <name>level</name>
+            </declaration>
+            <declaration>
+                <typedecl>
+                    <type><base>int</base></type>
+                </typedecl>
+                <name>attack</name>
+            </declaration>
+            <declaration>
+                <typedecl>
+                    <type><base>int</base></type>
+                </typedecl>
+                <name>defense</name>
+            </declaration>
+            <declaration>
+                <typedecl>
+                    <type><base>int</base></type>
+                </typedecl>
+                <name>lpendulum</name>
+            </declaration>
+            <declaration>
+                <typedecl>
+                    <type><base>int</base></type>
+                </typedecl>
+                <name>rpendulum</name>
+            </declaration>
+            <declaration>
+                <typedecl>
+                    <type><base>SpellType</base></type>
+                </typedecl>
+                <name>spellType</name>
+            </declaration>
+            <declaration>
+                <typedecl>
+                    <type><base>TrapType</base></type>
+                </typedecl>
+                <name>trapType</name>
+            </declaration>
+            <declaration>
+                <typedecl>
+                    <type><base>string</base></type>
+                </typedecl>
+                <name>text</name>
+            </declaration>
+        </declarations>
     </struct>
 </data>
