@@ -178,6 +178,10 @@
 
     <assignment>
         <typedecl>
+            <modifiers>
+                <modifier>static</modifier>
+                <modifier>constant</modifier>
+            </modifiers>
             <type><base>unsigned</base></type>
         </typedecl>
         <name>ZONE_COUNT</name>
@@ -186,6 +190,10 @@
 
     <assignment>
         <typedecl>
+            <modifiers>
+                <modifier>static</modifier>
+                <modifier>constant</modifier>
+            </modifiers>
             <type><base>unsigned</base></type>
         </typedecl>
         <name>OPENING_HAND</name>
